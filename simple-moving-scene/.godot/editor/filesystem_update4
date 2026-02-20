@@ -1,0 +1,5 @@
+res://main.tscn
+res://main3d.tscn
+res://player.gd
+res://collision_shape_3d.gd
+res://mesh_instance_3d.gd

@@ -1,0 +1,7 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1771569167
+icon.svg::CompressedTexture2D::4335829812247814179::1771569117::1771569167::1::::<><><>0<>0<>e13bf835930aeeaa537a9ac60c689809<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+label.gd::GDScript::1278672776196848797::1771569117::0::1::::<>Label<><>0<>0<><>::
+main.tscn::PackedScene::4631713567114059699::1771569117::0::1::::<><><>0<>0<><>::uid://shns3g37ai1j::::res://label.gd<>uid://derlfqok0bf8x::::res://mesh_instance_3d.gd
+mesh_instance_3d.gd::GDScript::7475789525829077477::1771569117::0::1::::<>MeshInstance3D<><>0<>0<><>::
+SS.png::CompressedTexture2D::6731928201426151865::1771569117::1771569168::1::::<><><>0<>0<>63015a4009faea96ab0e94ba19e9c45d<>res://.godot/imported/SS.png-eafef85478a80163f89fea0511947340.ctex::

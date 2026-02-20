@@ -1,12 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://b68vv7qrbb1l4"]
+[gd_scene load_steps=9 format=3 uid="uid://b68vv7qrbb1l4"]
 
+[ext_resource type="Script" uid="uid://bmvtxkukw37lc" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://shns3g37ai1j" path="res://label.gd" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://derlfqok0bf8x" path="res://mesh_instance_3d.gd" id="2_0xm2m"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h2yge"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_1bvp3"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_h2yge"]
 
+[sub_resource type="GDScript" id="GDScript_ig7tw"]
+script/source = "extends MeshInstance3D
+
+@export var spin_speed := 2.0
+
+func _process(delta):
+	rotation.y += spin_speed * delta
+"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lquwl"]
+size = Vector3(1, 1, 1.027832)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7mycd"]
+
 [node name="MAIN" type="Node2D"]
 position = Vector2(200, 200)
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.99998236, -0.005951524, 0, 0.005951524, -0.99998236, -0.11033058, 5.1880054, -14.088395)
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005, 4.447, -6.252)
+visible = false
+shape = SubResource("CapsuleShape3D_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005373001, 4.4474063, -6.2516007)
+mesh = SubResource("CapsuleMesh_1bvp3")
 
 [node name="Label" type="Label" parent="."]
 offset_right = 226.0
@@ -18,18 +49,34 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_ig7tw")
 
-[node name="MAIN3D" type="Node3D" parent="."]
-
-[node name="Camera3D" type="Camera3D" parent="MAIN3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 6)
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.994467, -0.10504918, 0, 0.10504918, 0.994467, 0, 2, 6)
 current = true
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="MAIN3D"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45, 30, 0)
 light_color = Color(1, 0.9937393, 0.83805776, 1)
 light_energy = 1.2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MAIN3D"]
-transform = Transform3D(0.70969605, 0.18694715, 0.6792513, 0.26972732, 0.8185865, -0.5071125, -0.6508294, 0.5431084, 0.530523, 0, 0, 0)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.7089543, 0.18470336, 0.6806383, 0.271671, 0.8190957, -0.5052493, -0.6508293, 0.54310834, 0.53052294, 0, 0, 0)
 mesh = SubResource("BoxMesh_h2yge")
-script = ExtResource("2_0xm2m")
+skeleton = NodePath("")
+script = SubResource("GDScript_ig7tw")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5809871, 0.8139128, 0, -0.8139128, -0.5809871, -0.11033058, -0.42534733, -9.738884)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D2"]
+transform = Transform3D(1, 0, 0, 0, -0.081973314, -0.9966345, 0, 0.9966345, -0.081973314, -4.271431, -25.914017, -21.930796)
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.5809871, 0.8139128, 0, -0.8139128, -0.5809871, -0.11033058, 9.675761, -9.738884)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+transform = Transform3D(9.999999, 0, 0, 0, 0.5804473, 8.142981, 0, -0.81429785, 5.8044724, 0, 5.8629484, -8.232418)
+shape = SubResource("BoxShape3D_lquwl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(9.999999, 0, 0, 0, 0.58044726, 8.142981, 0, -0.8142979, 5.8044724, 0, 5.874281, -8.224342)
+mesh = SubResource("BoxMesh_7mycd")
