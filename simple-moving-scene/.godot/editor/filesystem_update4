@@ -1,5 +1,8 @@
-res://main.tscn
-res://main3d.tscn
+res://lvl1.tscn
+res://trap_2.gd
+res://trap_1.gd
 res://player.gd
-res://collision_shape_3d.gd
-res://mesh_instance_3d.gd
+res://lvl2.tscn
+res://lvl_2.gd
+res://end.gd
+res://area_3d.gd

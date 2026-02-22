@@ -1,42 +1,24 @@
 extends CharacterBody3D
 
-@export var speed = 6.0
+@export var forward_speed = 6.0
+@export var side_speed = 5.0
 @export var jump_velocity = 5.0
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") # 9.8 by default
 
 func _physics_process(delta):
-	var direction = Vector3.ZERO
 
-	# Get input
-	if Input.is_action_pressed("move_up"):
-		direction.z -= 1
-	if Input.is_action_pressed("move_down"):
-		direction.z += 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
+	# Automatic forward movement
+	velocity.z = -forward_speed
 
-	direction = direction.normalized()
+	# Side movement (left/right only)
+	var side = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	velocity.x = side * side_speed
 
-	# Transform input to global direction
-	var forward = -global_transform.basis.z
-	var right = global_transform.basis.x
-	var move_dir = (forward * direction.z + right * direction.x).normalized() if direction != Vector3.ZERO else Vector3.ZERO
-
-	# Apply horizontal velocity
-	velocity.x = move_dir.x * speed
-	velocity.z = move_dir.z * speed
-
-	# Apply gravity
+	# Gravity
 	if not is_on_floor():
-		velocity.y -= gravity * delta
-	else:
-		velocity.y = 0
+		velocity.y -= 9.8 * delta
 
 	# Jump
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = jump_velocity
 
-	# Move character
 	move_and_slide()

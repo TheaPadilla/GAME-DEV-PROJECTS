@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg1juf4iu8uf4"]
+[gd_scene format=3 uid="uid://cg1juf4iu8uf4"]
 
 [ext_resource type="Script" uid="uid://bmvtxkukw37lc" path="res://player.gd" id="1_sk41h"]
 
@@ -11,35 +11,35 @@ size = Vector3(1, 1, 1.027832)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tvsrp"]
 
-[node name="main3d" type="Node3D"]
+[node name="main3d" type="Node3D" unique_id=918942878]
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=734526399]
 transform = Transform3D(1, 0, 0, 0, -0.5809871, 0.8139128, 0, -0.8139128, -0.5809871, -0.11033058, 9.675761, -9.738884)
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D"]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="DirectionalLight3D" unique_id=266655323]
 transform = Transform3D(1, 0, 0, 0, -0.081973314, -0.9966345, 0, 0.9966345, -0.081973314, -4.271431, -25.914017, -21.930796)
 
-[node name="Ground" type="StaticBody3D" parent="."]
+[node name="Ground" type="StaticBody3D" parent="." unique_id=645668437]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1827276434]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, -0.013916016)
 shape = SubResource("BoxShape3D_fxs24")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=398615593]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("BoxMesh_pmjbp")
 
-[node name="Player" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=355990252]
 script = ExtResource("1_sk41h")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1854146141]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 visible = false
 shape = SubResource("CapsuleShape3D_j8wvp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1220372745]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_tvsrp")
 
-[node name="Camera3D" type="Camera3D" parent="Player"]
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=2127522921]
 transform = Transform3D(0.021309003, -0.41445875, 0.90981865, 0.0336362, 0.9098073, 0.41366577, -0.999207, 0.021788038, 0.0333279, 9.24263, 3.7275844, 0.37812424)
