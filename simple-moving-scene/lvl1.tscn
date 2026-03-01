@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://bmvtxkukw37lc" path="res://player.gd" id="1_hppyo"]
 [ext_resource type="Script" uid="uid://shns3g37ai1j" path="res://label.gd" id="2_t5y7p"]
+[ext_resource type="AudioStream" uid="uid://efut4n83ct2o" path="res://assets/audio/jump.mp3" id="2_x7kom"]
+[ext_resource type="AudioStream" uid="uid://cnbb7efbvvx8v" path="res://assets/audio/hit.mp3" id="3_qoovb"]
 [ext_resource type="Script" uid="uid://0878v1wedq7o" path="res://trap_1.gd" id="3_t5y7p"]
+[ext_resource type="AudioStream" uid="uid://cii6i1ggewucy" path="res://assets/audio/walk.mp3" id="4_1w0mb"]
 [ext_resource type="Script" uid="uid://dqifi8qkxdd1o" path="res://end.gd" id="4_wg0iv"]
+[ext_resource type="AudioStream" uid="uid://bodgycrqgindj" path="res://assets/audio/walk2.mp3" id="8_qoovb"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wg0iv"]
 
@@ -56,6 +60,16 @@ shape = SubResource("CapsuleShape3D_ok8r0")
 [node name="Camera3D" type="Camera3D" parent="Player" unique_id=627223856]
 transform = Transform3D(1, 0, 0, 0, -0.91036606, -0.4138037, 0, 0.4138037, -0.91036606, -0.21485233, -1.7300276, -2.3564305)
 current = true
+
+[node name="JumpSound" type="AudioStreamPlayer3D" parent="Player" unique_id=1569888896]
+stream = ExtResource("2_x7kom")
+
+[node name="HitSound" type="AudioStreamPlayer3D" parent="Player" unique_id=207285770]
+stream = ExtResource("3_qoovb")
+
+[node name="WalkSound" type="AudioStreamPlayer3D" parent="Player" unique_id=1133401209]
+stream = ExtResource("4_1w0mb")
+parameters/looping = true
 
 [node name="Label" type="Label" parent="." unique_id=786115748]
 visible = false
@@ -142,3 +156,17 @@ shape = SubResource("BoxShape3D_ok8r0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="levelend" unique_id=851641390]
 mesh = SubResource("BoxMesh_audra")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=572610116]
+
+[node name="ScoreLabel" type="Label" parent="HUD" unique_id=256530412]
+offset_left = 40.0
+offset_top = 35.0
+offset_right = 105.0
+offset_bottom = 58.0
+text = "Score : 0"
+
+[node name="Music" type="AudioStreamPlayer3D" parent="." unique_id=1408774664]
+stream = ExtResource("8_qoovb")
+autoplay = true
+parameters/looping = true

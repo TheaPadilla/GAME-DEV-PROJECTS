@@ -1,8 +1,9 @@
+AudioStreamPlayer3D
+Label
+CanvasLayer
 MeshInstance3D
 CollisionShape3D
 Area3D
-Label
-CanvasLayer
 Camera3D
 CharacterBody3D
 StaticBody3D
@@ -11,4 +12,3 @@ AnimatedSprite2D
 CharacterBody2D
 AnimatedSprite3D
 CollisionShape2D
-StaticBody2D
