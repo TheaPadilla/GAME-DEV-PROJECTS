@@ -12,8 +12,13 @@ It’s designed to learn basic scene setup, scripting, and movement in Godot.
 <img src="simple-moving-scene/ss3.png" alt="Alt text" width="500"/>
 <img src="simple-moving-scene/ss4.png" alt="Alt text" width="500"/>
 
-# Week 3: Activity1 UI/UX & Audio
+# Week 3: Activity1 UI/UX & Audio 
 <img src="simple-moving-scene/ss5.png" alt="Alt text" width="500"/>
+
+# Week 3: Activity2 AI & Enemies
+<img src="simple-moving-scene/week 3 ss.png" alt="Alt text" width="500"/>
+
+
 
 
 
