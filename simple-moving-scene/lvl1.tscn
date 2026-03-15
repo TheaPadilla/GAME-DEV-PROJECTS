@@ -44,6 +44,8 @@ size = Vector3(10, 5, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_audra"]
 size = Vector3(10, 5, 1)
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_qoovb"]
+
 [node name="MAIN" type="Node2D" unique_id=318653279]
 position = Vector2(200, 200)
 
@@ -170,3 +172,6 @@ text = "Score : 0"
 stream = ExtResource("8_qoovb")
 autoplay = true
 parameters/looping = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1121202683]
+navigation_mesh = SubResource("NavigationMesh_qoovb")

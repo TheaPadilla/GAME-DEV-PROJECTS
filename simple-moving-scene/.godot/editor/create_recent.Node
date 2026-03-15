@@ -1,8 +1,10 @@
+NavigationRegion3D
+NavigationAgent3D
+MeshInstance3D
+CollisionShape3D
 AudioStreamPlayer3D
 Label
 CanvasLayer
-MeshInstance3D
-CollisionShape3D
 Area3D
 Camera3D
 CharacterBody3D
@@ -11,4 +13,3 @@ DirectionalLight3D
 AnimatedSprite2D
 CharacterBody2D
 AnimatedSprite3D
-CollisionShape2D

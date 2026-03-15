@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://compdprsmuibm"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7xaro"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7k104"]
+
+[node name="Enemy" type="Node3D" unique_id=1899393759]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=373412360]
+shape = SubResource("CapsuleShape3D_7xaro")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=763961978]
+mesh = SubResource("CapsuleMesh_7k104")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=863676863]
