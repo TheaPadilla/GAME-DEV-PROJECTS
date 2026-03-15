@@ -1,12 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1773578085
+::res://::1773578271
 area_3d.gd::GDScript::1453864433035709701::1771752336::0::1::::<>Area3D<><>0<>0<><>::
 end.gd::GDScript::8299118201108008662::1771752087::0::1::::<>Area3D<><>0<>0<><>::
-enemy.gd::GDScript::6294225720910201807::1773578026::0::1::::<>CharacterBody3D<><>0<>0<><>::
-enemyscene.tscn::PackedScene::4778736831652112278::1773578044::0::1::::<><><>0<>0<><>::uid://cvw78iukxqg1t::::res://enemy.gd
+enemy.gd::GDScript::6294225720910201807::1773578112::0::1::::<>CharacterBody3D<><>0<>0<><>::
+enemyscene.tscn::PackedScene::4778736831652112278::1773578113::0::1::::<><><>0<>0<><>::uid://cvw78iukxqg1t::::res://enemy.gd
 icon.svg::CompressedTexture2D::4335829812247814179::1771656831::1771656883::1::::<><><>0<>0<>e13bf835930aeeaa537a9ac60c689809<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 label.gd::GDScript::1278672776196848797::1772359867::0::1::::<>Label<><>0<>0<><>::
-lvl1.tscn::PackedScene::5904026918644136112::1773577986::0::1::::<><><>0<>0<><>::uid://bmvtxkukw37lc::::res://player.gd<>uid://shns3g37ai1j::::res://label.gd<>uid://efut4n83ct2o::::res://assets/audio/jump.mp3<>uid://cnbb7efbvvx8v::::res://assets/audio/hit.mp3<>uid://0878v1wedq7o::::res://trap_1.gd<>uid://cii6i1ggewucy::::res://assets/audio/walk.mp3<>uid://dqifi8qkxdd1o::::res://end.gd<>uid://bodgycrqgindj::::res://assets/audio/walk2.mp3<>uid://cac4dkvucb4ji::::res://enemyscene.tscn
+lvl1.tscn::PackedScene::5904026918644136112::1773578156::0::1::::<><><>0<>0<><>::uid://bmvtxkukw37lc::::res://player.gd<>uid://shns3g37ai1j::::res://label.gd<>uid://efut4n83ct2o::::res://assets/audio/jump.mp3<>uid://cnbb7efbvvx8v::::res://assets/audio/hit.mp3<>uid://0878v1wedq7o::::res://trap_1.gd<>uid://cii6i1ggewucy::::res://assets/audio/walk.mp3<>uid://dqifi8qkxdd1o::::res://end.gd<>uid://bodgycrqgindj::::res://assets/audio/walk2.mp3<>uid://cac4dkvucb4ji::::res://enemyscene.tscn
 lvl2.tscn::PackedScene::560839982387823418::1772361229::0::1::::<><><>0<>0<><>::uid://bmvtxkukw37lc::::res://player.gd<>uid://efut4n83ct2o::::res://assets/audio/jump.mp3<>uid://shns3g37ai1j::::res://label.gd<>uid://cnbb7efbvvx8v::::res://assets/audio/hit.mp3<>uid://0878v1wedq7o::::res://trap_1.gd<>uid://uyi61vmxmm7f::::res://area_3d.gd<>uid://cii6i1ggewucy::::res://assets/audio/walk.mp3<>uid://bodgycrqgindj::::res://assets/audio/walk2.mp3
 lvl_2.gd::GDScript::3738561020175660520::1771751805::0::1::::<>Node2D<><>0<>0<><>::
 main3d.tscn::PackedScene::5248230727440555935::1773577910::0::1::::<><><>0<>0<><>::uid://bmvtxkukw37lc::::res://player.gd

@@ -1,3 +1,4 @@
-res://enemyscene.tscn
-res://enemy.gd
 res://lvl1.tscn
+res://main3d.tscn
+res://enemy.gd
+res://enemyscene.tscn

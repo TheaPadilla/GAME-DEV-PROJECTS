@@ -11,7 +11,7 @@ size = Vector3(1, 1, 1.027832)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_tvsrp"]
 
-[node name="main3d" type="Node3D" unique_id=918942878]
+[node name="main3d" type="Node3D" unique_id=918942878 groups=["player"]]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=734526399]
 transform = Transform3D(1, 0, 0, 0, -0.5809871, 0.8139128, 0, -0.8139128, -0.5809871, -0.11033058, 9.675761, -9.738884)
@@ -29,7 +29,7 @@ shape = SubResource("BoxShape3D_fxs24")
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
 mesh = SubResource("BoxMesh_pmjbp")
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=355990252 groups=["enemy"]]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=355990252]
 script = ExtResource("1_sk41h")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1854146141]

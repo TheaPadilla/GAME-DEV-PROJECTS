@@ -45,12 +45,10 @@ size = Vector3(10, 5, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_audra"]
 size = Vector3(10, 5, 1)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_qoovb"]
-
 [node name="MAIN" type="Node2D" unique_id=318653279]
 position = Vector2(200, 200)
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=503129602 groups=["enemy"]]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=503129602 groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, -0.99998236, -0.005951524, 0, 0.005951524, -0.99998236, -0.11033058, 0.87823796, 6.444469)
 script = ExtResource("1_hppyo")
 
@@ -173,9 +171,6 @@ text = "Score : 0"
 stream = ExtResource("8_qoovb")
 autoplay = true
 parameters/looping = true
-
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1121202683]
-navigation_mesh = SubResource("NavigationMesh_qoovb")
 
 [node name="enemyscene" parent="." unique_id=2031137539 instance=ExtResource("9_1w0mb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0604486, 1.0165849, -1.3305678)
