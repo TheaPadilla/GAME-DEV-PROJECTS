@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://cii6i1ggewucy" path="res://assets/audio/walk.mp3" id="4_1w0mb"]
 [ext_resource type="Script" uid="uid://dqifi8qkxdd1o" path="res://end.gd" id="4_wg0iv"]
 [ext_resource type="AudioStream" uid="uid://bodgycrqgindj" path="res://assets/audio/walk2.mp3" id="8_qoovb"]
+[ext_resource type="PackedScene" uid="uid://cac4dkvucb4ji" path="res://enemyscene.tscn" id="9_1w0mb"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_wg0iv"]
 
@@ -49,7 +50,7 @@ size = Vector3(10, 5, 1)
 [node name="MAIN" type="Node2D" unique_id=318653279]
 position = Vector2(200, 200)
 
-[node name="Player" type="CharacterBody3D" parent="." unique_id=503129602]
+[node name="Player" type="CharacterBody3D" parent="." unique_id=503129602 groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, -0.99998236, -0.005951524, 0, 0.005951524, -0.99998236, -0.11033058, 0.87823796, 6.444469)
 script = ExtResource("1_hppyo")
 
@@ -175,3 +176,6 @@ parameters/looping = true
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1121202683]
 navigation_mesh = SubResource("NavigationMesh_qoovb")
+
+[node name="enemyscene" parent="." unique_id=2031137539 instance=ExtResource("9_1w0mb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0604486, 1.0165849, -1.3305678)
