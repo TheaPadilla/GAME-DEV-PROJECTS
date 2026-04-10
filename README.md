@@ -1,6 +1,4 @@
 NAME: Thea Francine C. Padilla
-STUDENT ID: 23103253
-SCHEDULE: FSat 2:00PM-4:30PM
 
 # SimpleScene Demo Week 1
 
