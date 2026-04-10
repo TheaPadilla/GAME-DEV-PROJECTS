@@ -1,4 +1,7 @@
-res://lvl1.tscn
-res://main3d.tscn
-res://enemy.gd
-res://enemyscene.tscn
+res://week4_multiplayer/multiplayer.tscn
+res://multi/multiplayer.tscn
+res://multi/player_1.gd
+res://multi/player_2.gd
+res://multiplayer/Main.tscn
+res://multiplayer/player_1.gd
+res://multiplayer/player_2.gd

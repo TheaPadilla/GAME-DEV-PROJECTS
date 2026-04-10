@@ -45,6 +45,8 @@ size = Vector3(10, 5, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_audra"]
 size = Vector3(10, 5, 1)
 
+[sub_resource type="GDScript" id="GDScript_1w0mb"]
+
 [node name="MAIN" type="Node2D" unique_id=318653279]
 position = Vector2(200, 200)
 
@@ -174,3 +176,6 @@ parameters/looping = true
 
 [node name="enemyscene" parent="." unique_id=2031137539 instance=ExtResource("9_1w0mb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0604486, 1.0165849, -1.3305678)
+
+[node name="NakamaManager" type="Node" parent="." unique_id=1355795444]
+script = SubResource("GDScript_1w0mb")

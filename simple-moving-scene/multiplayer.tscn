@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cpaebpeyi6ftt"]
+
+[ext_resource type="Texture2D" uid="uid://b21kqo74km6d8" path="res://icon.svg" id="1_o4y1c"]
+
+[sub_resource type="GDScript" id="GDScript_wktud"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 200
+@export var jump_force = -400
+@export var gravity = 900
+
+func _physics_process(delta):
+
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	var direction = 0
+
+	if Input.is_action_pressed(\"p1_right\"):
+		direction += 1
+	if Input.is_action_pressed(\"p1_left\"):
+		direction -= 1
+
+	velocity.x = direction * speed
+
+	if Input.is_action_just_pressed(\"p1_jump\") and is_on_floor():
+		velocity.y = jump_force
+
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkhfk"]
+
+[sub_resource type="GDScript" id="GDScript_5bi2t"]
+script/source = "extends CharacterBody2D
+
+@export var speed = 200
+@export var jump_force = -400
+@export var gravity = 900
+
+func _physics_process(delta):
+
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	var direction = 0
+
+	if Input.is_action_pressed(\"p2_right\"):
+		direction += 1
+	if Input.is_action_pressed(\"p2_left\"):
+		direction -= 1
+
+	velocity.x = direction * speed
+
+	if Input.is_action_just_pressed(\"p2_jump\") and is_on_floor():
+		velocity.y = jump_force
+
+	move_and_slide()
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43gxd"]
+
+[node name="Multiplayer" type="Node2D" unique_id=1881439308]
+
+[node name="Player1" type="CharacterBody2D" parent="." unique_id=310762526]
+position = Vector2(703, 176)
+script = SubResource("GDScript_wktud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player1" unique_id=249247177]
+shape = SubResource("RectangleShape2D_dkhfk")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1" unique_id=2024995677]
+texture = ExtResource("1_o4y1c")
+
+[node name="Player2" type="CharacterBody2D" parent="." unique_id=1834538248]
+position = Vector2(213, 169)
+script = SubResource("GDScript_5bi2t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2" unique_id=1125677529]
+texture = ExtResource("1_o4y1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2" unique_id=1720201583]
+shape = SubResource("RectangleShape2D_43gxd")
