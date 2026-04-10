@@ -18,6 +18,8 @@ It’s designed to learn basic scene setup, scripting, and movement in Godot.
 # Week 3: Activity2 AI & Enemies
 <img src="simple-moving-scene/week 3 ss.png" alt="Alt text" width="500"/>
 
+# Week 4: Multiplayer
+<img src="simple-moving-scene/week4.png" alt="Alt text" width="500"/>
 
 
 
